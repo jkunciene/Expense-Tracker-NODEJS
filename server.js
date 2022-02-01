@@ -12,6 +12,10 @@ const transactions = require('./routes/transactions');
 
 const app = express();
 
+//Node.js body parsing middleware.
+//that allows to use the body parser
+app.use(express.json());
+
 app.use('/api/v1/transactions', transactions);
 
 app.get('/', (req, res) => res.send("Hello #myStudents"));
