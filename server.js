@@ -16,6 +16,12 @@ const app = express();
 //that allows to use the body parser
 app.use(express.json());
 
+
+//morgan rodo konsoleje kokios uzklausos atliekamos, koks ju statusa
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+}
+
 app.use('/api/v1/transactions', transactions);
 
 app.get('/', (req, res) => res.send("Hello #myStudents"));
