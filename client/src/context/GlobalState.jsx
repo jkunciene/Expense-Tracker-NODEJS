@@ -1,7 +1,7 @@
 import { createContext, useReducer} from 'react';
 import AppReducer from './AppReducer';
 import axios from 'axios';
-import { config } from 'dotenv';
+
 //initial state
 const initialState = {
     transactions:[ ],
